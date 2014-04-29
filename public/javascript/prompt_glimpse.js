@@ -8,13 +8,21 @@
   var fb_instance = new Firebase("https://glowing-fire-2304.firebaseio.com/");
   var fb_vids = null;
 
-  $(document).ready(function(){
+  $(document).ready(function() {
+
 
     $("#recording-container").hide();
     $("#uploading-container").hide();
     $("#confirmation-container").hide();
     $("#connect-media-container").hide();
+    $("#mobile-message-container").hide();
 
+    // if mobile, tell them to go laptop
+    if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+        $("#prompt-container").hide();
+        $("#mobile-message-container").show();
+        return;
+    }
     // see if there's a srcid in the url
     var url_segments = document.location.href.split("/#");
     if(url_segments[1]) {
