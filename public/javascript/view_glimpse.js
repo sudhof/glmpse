@@ -5,13 +5,13 @@
   var fb_instance = new Firebase("https://glowing-fire-2304.firebaseio.com/");
 
   $(document).ready(function(){
+    $("#videos-container").hide();
+
     // see if there's a srcid in the url
     var url_segments = document.location.href.split("/#");
     if(url_segments[1]) {
         var srcid = url_segments[1];
         render_by_srcid(srcid);
-
-
     } else {
         var chat = fb_instance.child('chatrooms');
         chat.on('value', function(snapshot) {
@@ -27,6 +27,9 @@
   var render_by_srcid = function(srcid) {
     var fb_vids = fb_instance.child('chatrooms').child(srcid);
     fb_vids.on('value', function(snapshot) {
+        $("#loading-container").hide();
+        $("#videos-container").show();
+
         var videos = snapshot.val().glimpses;
         for (var vid in videos) {
             render_video(videos[vid]);
