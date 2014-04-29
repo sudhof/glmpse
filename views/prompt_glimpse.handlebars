@@ -1,0 +1,86 @@
+
+
+<div class="container" id="prompt-container">
+
+
+    <div class="row dspace5 tspace5">
+        <div class="col-xs-12">
+            <h1>A glimpse into your life</h1>
+            <p>
+                Use this app to automatically record a 4-sec video. <br />
+                Say hi or just show me what's around you. <br />
+            </p>
+        </div>
+    </div>
+
+    <div class="jumbotron">
+        <div id="recording-prompt">
+            <button type="button" class="btn btn-default btn-lg">
+                <i class="fa fa-circle fa-5x" id="record-icon"></i>
+            </button>
+            <h1>Record glimpse</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-xs-12" id="info-box">
+            <p>
+                A "Glimpse" is a 4-second video. <br />
+                Make sure to enable camera access. <br />
+                Video automatically uploaded upon completion. <br />
+                If on mobile, please use Chrome browser. <br />
+            </p>
+        </div>
+    </div>
+
+</div>
+
+
+<div class="container" id="recording-container">
+    <div class="row">
+        <div class="col-xs-12 tspace10">
+            <div class="img-thumbnail" id="webcam-stream"></div>
+        </div>
+    </div>
+    <div id="video-container"></div>
+</div>
+
+
+<div class="container" id="uploading-container">
+
+    <div class="jumbotron tspace10">
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
+        <h2> Uploading... </h2>
+    </div>
+
+</div>
+
+<div class="container" id="connect-media-container">
+    <div class="jumbotron tspace10">
+        <i class="fa fa-spinner fa-spin fa-5x"></i>
+        <h2> Please activate webcam </h2>
+        <h3> If on mobile, use chrome! </h3>
+    </div>
+</div>
+
+<div class="container" id="confirmation-container">
+
+    <div class="jumbotron tspace10">
+        <i class="fa fa-check fa-5x"></i>
+        <h2> Thank you for the glimpse! </h2>
+        <div id="uploaded-video-container">
+
+        </div>
+    </div>
+
+</div>
+
+
+<script src='/javascript/prompt_glimpse.js'></script>
+
+
+
+
+
+
+

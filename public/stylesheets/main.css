@@ -1,0 +1,63 @@
+body {
+  margin: 10px;
+  font: 15px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+a {
+  color: #00B7FF;
+}
+p {
+  font-size: 25px;
+}
+#record-icon {
+  color: #BA1919;
+}
+#recording-prompt {
+  text-align: center;
+}
+#recording-prompt h1 {
+  cursor: pointer;
+}
+.tspace1 {
+  margin-top: 10px;
+}
+.tspace2 {
+  margin-top: 20px;
+}
+.tspace5 {
+  margin-top: 50px;
+}
+.tspace10 {
+  margin-top: 100px;
+}
+.dspace1 {
+  margin-bottom: 10px;
+}
+.dspace2 {
+  margin-bottom: 20px;
+}
+.dspace5 {
+  margin-bottom: 50px;
+}
+.dspace10 {
+  margin-bottom: 100px;
+}
+.video-unit {
+  display: inline;
+  float: left;
+  margin: 10px;
+}
+#second_counter {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  color: white;
+  z-index: 999;
+}
+#webcam-stream {
+  margin-left: auto;
+  margin-right: auto;
+}
+#second-counter {
+  color: black;
+  z-index: 999;
+}

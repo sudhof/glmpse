@@ -1,0 +1,95 @@
+
+    <script src='javascript/facequilt.js'></script>
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">So, this happened...</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="/facequilt">Browse Events</a></li>
+            <li><a href="/facequilt-reactions">Browse Reactions</a></li-->
+            <!--li><a href="/add-confession">Add</a></li-->
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+    <div id="facequilt-webcam-stream" class="img-rounded"></div>
+    <div id="facequilt-webcam-directions" class="img-rounded">
+        <p>Get ready to record your 1-second reaction...</p>
+        <h3><div id="facequilt-second-counter">3</div></h3>
+    </div>
+    <<div id="facequilt-video-container"></div>
+
+    <div id="facequilt-container">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12">
+                    <h4>Our days are filled with events big and small that inspire us, surprise us, or bring us down. This is a community for sharing those moments and bringing others into the experience through their reactions.</h4>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+
+                    <button type="button" class="btn btn-default btn-sm addtext">
+                        <span class="glyphicon glyphicon-plus"></span>I want to share
+                    </button>
+
+                    <div id="add-text-form">
+                        <form role="form" method="post" action="/post-add-confession">
+                          <div class="form-group">
+                            <label for="text">What Happened?</label>
+                            <textarea class="form-control" name="confession[text]" id="text" placeholder="Your text" rows="3"></textarea>
+                          </div>
+                          <div class="form-group">
+                            <div class="col-md-10">
+                              <button type="submit" class="btn btn-default">Submit</button>
+                            </div>
+                          </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+
+
+            {{#each confessions}}
+                <div class="row confession-unit img-rounded">
+                    <div class="col-md-2 confession-text img-rounded">
+                        {{text}}
+                    </div>
+                    <div class="col-md-10" id="{{id}}">
+                        {{#each reactions}}
+                            <!--div class="reaction-blob">{{v}}</div-->
+                        {{/each}}
+                        <button chatid="{{id}}" type="button" class="btn btn-default btn-sm addreaction">
+                            <span class="glyphicon glyphicon-plus"></span> Add Reaction
+                        </button>
+                    </div>
+                </div>
+            {{/each}}
+        </div>
+    </div>
+
+  <!--div>Welcome to {{title}}, enable camera to post video emoji!</div>
+  <div id="waiting">Connecting to chat server...</div>
+  <div id="second_counter"></div>
+  <div id="conversation"></div>
+  <div id="submission">
+    <input type="text" placeholder="say something..">
+  </div>
+  <div id="webcam_stream"></div>
+  <div id="video_container"></div-->
+
+
